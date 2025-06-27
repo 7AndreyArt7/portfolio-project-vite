@@ -1,18 +1,33 @@
 import './App.css'
+import {Header} from "./layout/Header.tsx";
 import styled from "styled-components";
+
 
 function App() {
     return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-        </div>
+        <AddStyles className="App">
+            <Wrapper>
+                <Header/>
+            </Wrapper>
+        </AddStyles>
     )
 }
 
 export default App
 
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
+const AddStyles = styled.div`
+ display: flex;
+    align-items: center;
+    justify-content: center;
+   
+`
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+margin: 40px;
+`
