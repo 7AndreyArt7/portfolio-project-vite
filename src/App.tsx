@@ -1,6 +1,7 @@
 import './App.css'
 import {Header} from "./layout/Header.tsx";
 import styled from "styled-components";
+import {About} from "./layout/About.tsx";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <AddStyles className="App">
             <Wrapper>
                 <Header/>
+                <About/>
             </Wrapper>
         </AddStyles>
     )
