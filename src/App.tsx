@@ -2,6 +2,7 @@ import './App.css'
 import {Header} from "./layout/Header.tsx";
 import styled from "styled-components";
 import {About} from "./layout/About.tsx";
+import {TechStack} from "./layout/TechStack.tsx";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             <Wrapper>
                 <Header/>
                 <About/>
+                <TechStack/>
             </Wrapper>
         </AddStyles>
     )
@@ -18,10 +20,10 @@ function App() {
 export default App
 
 const AddStyles = styled.div`
- display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-   
+
 `
 
 const Wrapper = styled.div`
@@ -31,5 +33,5 @@ const Wrapper = styled.div`
     min-height: 100vh;
     max-width: 1200px;
     width: 100%;
-margin: 40px;
+    margin: 40px;
 `

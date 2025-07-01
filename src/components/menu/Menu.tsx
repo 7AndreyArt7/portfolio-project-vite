@@ -15,11 +15,18 @@ export const Menu = () => {
 };
 
 const StyleMenu = styled.nav`
-    ul{
+    max-width: 790px;
+    width: 100%;
+  
+    ul {
+        max-width: 609px;
+        width: 100%;
         display: flex;
         list-style: none;
+        justify-content: space-between;
     }
-    a{
+
+    a {
         text-decoration: none;
         font-weight: 500;
         font-size: 20px;

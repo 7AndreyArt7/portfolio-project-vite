@@ -20,8 +20,12 @@ const StyleHeader = styled.header`
     justify-content: space-between;
     width: 100%;
     margin-top: 40px;
+    margin-bottom: 220px;
 `
 const Navigation = styled.div`
     display: flex;
+    justify-content: space-between;
+    max-width: 609px;
+    width: 100%;
     gap: 50px;
 `
