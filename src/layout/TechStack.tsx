@@ -28,7 +28,7 @@ export const TechStack = () => {
     );
 };
 
-const StyledTechStack = styled.div`
+const StyledTechStack = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@ const IconBlock = styled.div`
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 3fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 150px;
+    grid-row-gap: 50px;
     
 `

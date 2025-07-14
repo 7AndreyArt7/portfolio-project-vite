@@ -18,7 +18,7 @@ export const About = () => {
     );
 };
 
-const StyledAbout = styled.div`
+const StyledAbout = styled.section`
     width: 100%;
     margin-bottom: 330px;
 `

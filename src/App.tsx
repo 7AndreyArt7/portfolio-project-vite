@@ -5,6 +5,7 @@ import {About} from "./layout/About.tsx";
 import {TechStack} from "./layout/TechStack.tsx";
 import {Projects} from "./layout/Projects/Projects.tsx";
 import {Contact} from "./layout/contact/Contact.tsx";
+import {Footer} from "./layout/footer/Footer.tsx";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <TechStack/>
                 <Projects/>
                 <Contact/>
+                <Footer/>
             </Wrapper>
         </AddStyles>
     )
@@ -34,7 +36,6 @@ const AddStyles = styled.div`
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
     max-width: 1440px;
     width: 100%;
