@@ -3,6 +3,7 @@ import {Header} from "./layout/Header.tsx";
 import styled from "styled-components";
 import {About} from "./layout/About.tsx";
 import {TechStack} from "./layout/TechStack.tsx";
+import {Projects} from "./layout/Projects/Projects.tsx";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
                 <Header/>
                 <About/>
                 <TechStack/>
+                <Projects/>
             </Wrapper>
         </AddStyles>
     )
@@ -23,6 +25,7 @@ const AddStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #191919;
 
 `
 
@@ -31,7 +34,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    max-width: 1200px;
+    max-width: 1440px;
     width: 100%;
-    margin: 40px;
+    padding: 40px 110px 60px 110px;
 `

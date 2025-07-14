@@ -18,6 +18,7 @@ export const Header = () => {
 const StyleHeader = styled.header`
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
     width: 100%;
     margin-top: 40px;
     margin-bottom: 220px;

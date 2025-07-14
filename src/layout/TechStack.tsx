@@ -1,3 +1,4 @@
+import { Description } from "../components/Description.tsx";
 import {Title} from "../components/Title.tsx";
 import Icon from "../components/icon/Icon.tsx";
 import styled from "styled-components";
@@ -33,24 +34,14 @@ const StyledTechStack = styled.div`
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    max-height: 100vh;
-`
-
-const Description = styled.span`
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 0.8125;
-    text-align: center;
-    color: #a7a7a7;
-    margin-bottom: 140px;
+    margin-bottom: 200px;
 `
 
 const IconBlock = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap : 200px;
-
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
 `
-

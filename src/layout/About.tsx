@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const About = () => {
     return (
         <StyledAbout>
-            <FlexWrapper justify={"space-between"}>
+            <FlexWrapper justify={"space-between"} align="center" >
                 <StyledInfo>
                     <span>Hi 👋,</span>
                     <h2>My name is</h2>
@@ -26,6 +26,7 @@ const StyledInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
 
     span, h2, h1 {
         font-family: "Poppins", sans-serif;
@@ -38,10 +39,20 @@ const StyledInfo = styled.div`
 `
 
 const Photo = styled.img`
-    border-radius: 230px;
-    width: 349px;
-    height: 349px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    padding: 7px;
+    border-radius: 100%;
+    display: inline-block;
+
+    img {
+        border-radius: 12px;
+        display: block;
+        
+        object-fit: cover;
+
 `
 const Name = styled.h2`
     background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
