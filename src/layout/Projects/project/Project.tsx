@@ -1,5 +1,6 @@
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import styled from "styled-components";
+import Icon from "../../../components/icon/Icon.tsx";
 
 
 type ProjectPropsType = {
@@ -18,6 +19,16 @@ export const Project = (props: ProjectPropsType) => {
                     <ProjectName>{props.projectName}</ProjectName>
                     <ProjectDescription>{props.projectDescription}</ProjectDescription>
                     <TechStackCard>Tech stack : <Stack>{props.techStackCard}</Stack> </TechStackCard>
+                    <BoxLink>
+                        <FlexWrapper>
+                            <Icon iconId={"link-chain"} width={"20"} height={"20"} viewBox={"0 0 20 20"}/>
+                            <Link href={"#"}>Live Preview</Link>
+                        </FlexWrapper>
+                        <FlexWrapper>
+                            <Icon iconId={"github"} width={"20"} height={"20"}/>
+                            <Link href={"#"}>View Code</Link>
+                        </FlexWrapper>
+                    </BoxLink>
                 </BoxInfo>
             </FlexWrapper>
         </ProjectWrapper>
@@ -42,7 +53,6 @@ const StylesImg = styled.img`
 `
 
 const BoxInfo = styled.div`
-    max-width: 100%;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -75,7 +85,25 @@ const TechStackCard = styled.span`
     color: #ccc;
 `
 
-const Stack= styled.span`
+const Stack = styled.span`
     font-weight: 300;
     font-size: 14px;
+`
+
+const BoxLink = styled.div`
+    display: flex;
+    div + div {
+        margin-left: 50px;
+    }
+    margin-top: 20px;
+`
+const Link = styled.a`
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    margin-left: 10px;
 `

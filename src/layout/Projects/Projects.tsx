@@ -3,6 +3,12 @@ import {Title} from "../../components/Title.tsx";
 import {Description} from "../../components/Description.tsx";
 import {Project} from "./project/Project.tsx";
 import project1 from "../../assets/images/project-1.jpg"
+import project2 from "../../assets/images/project-2.webp"
+import project3 from "../../assets/images/project-3.webp"
+import project4 from "../../assets/images/project-4.jpg"
+import project5 from "../../assets/images/project-5.webp"
+import project6 from "../../assets/images/project-1.jpg"
+
 
 export const Projects = () => {
     return (
@@ -17,31 +23,31 @@ export const Projects = () => {
                     techStackCard={"HTML, JavaScript, SASS, React"}
                 />
                 <Project
-                    image={project1}
+                    image={project2}
                     projectName={"Project Tile goes here"}
                     projectDescription={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     techStackCard={"HTML, JavaScript, SASS, React"}
                 />
                 <Project
-                    image={project1}
+                    image={project3}
                     projectName={"Project Tile goes here"}
                     projectDescription={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     techStackCard={"HTML, JavaScript, SASS, React"}
                 />
                 <Project
-                    image={project1}
+                    image={project4}
                     projectName={"Project Tile goes here"}
                     projectDescription={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     techStackCard={"HTML, JavaScript, SASS, React"}
                 />
                 <Project
-                    image={project1}
+                    image={project5}
                     projectName={"Project Tile goes here"}
                     projectDescription={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     techStackCard={"HTML, JavaScript, SASS, React"}
                 />
                 <Project
-                    image={project1}
+                    image={project6}
                     projectName={"Project Tile goes here"}
                     projectDescription={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                     techStackCard={"HTML, JavaScript, SASS, React"}

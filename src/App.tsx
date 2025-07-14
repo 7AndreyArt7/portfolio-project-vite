@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {About} from "./layout/About.tsx";
 import {TechStack} from "./layout/TechStack.tsx";
 import {Projects} from "./layout/Projects/Projects.tsx";
+import {Contact} from "./layout/contact/Contact.tsx";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <About/>
                 <TechStack/>
                 <Projects/>
+                <Contact/>
             </Wrapper>
         </AddStyles>
     )
