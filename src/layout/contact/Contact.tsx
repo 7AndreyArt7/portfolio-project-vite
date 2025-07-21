@@ -1,18 +1,25 @@
 import styled from "styled-components";
 import {Button} from "../../components/Button.tsx";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <Title>For any questions please mail me:</Title>
-            <Link href={"#"}> hi@pavanmg.in</Link>
-            <StyledForm>
-                <Field placeholder={"name"}/>
-                <Field placeholder={"subject"}/>
-                <Field as={"textarea"} placeholder={"message"}/>
-                <Button type={"submit"}>Send message</Button>
-            </StyledForm>
+            <Container>
+                <FlexWrapper direction={"column"}
+                align={"center"}>
+                    <Title>For any questions please mail me:</Title>
+                    <Link href={"#"}> hi@pavanmg.in</Link>
+                    <StyledForm>
+                        <Field placeholder={"name"}/>
+                        <Field placeholder={"subject"}/>
+                        <Field as={"textarea"} placeholder={"message"}/>
+                        <Button type={"submit"}>Send message</Button>
+                    </StyledForm>
+                </FlexWrapper>
+            </Container>
         </StyledContact>
     );
 };
@@ -20,9 +27,6 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
     min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    
 `
 
 const Title = styled.h2`
@@ -34,7 +38,6 @@ const Title = styled.h2`
     text-align: center;
     color: #ccc;
     margin-bottom: 10px;
-
 `
 
 const Link = styled.a`

@@ -1,26 +1,28 @@
 import {FlexWrapper} from "../components/FlexWrapper.tsx";
 import photo from "../assets/images/ava.webp"
 import styled from "styled-components";
+import {Container} from "../components/Container.tsx";
 
 export const About = () => {
     return (
         <StyledAbout>
-            <FlexWrapper justify={"space-between"} align="center" >
-                <StyledInfo>
-                    <span>Hi 👋,</span>
-                    <h2>My name is</h2>
-                    <Name>Andrei Artsiusheuski</Name>
-                    <h1>I build things for web</h1>
-                </StyledInfo>
-                <Photo src={photo}/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper justify={"space-between"} align="center" >
+                    <StyledInfo>
+                        <span>Hi 👋,</span>
+                        <h2>My name is</h2>
+                        <Name>Andrei Artsiusheuski</Name>
+                        <h1>I build things for web</h1>
+                    </StyledInfo>
+                    <Photo src={photo}/>
+                </FlexWrapper>
+            </Container>
         </StyledAbout>
     );
 };
 
 const StyledAbout = styled.section`
-    width: 100%;
-    margin-bottom: 330px;
+    margin-bottom: 150px;
 `
 const StyledInfo = styled.div`
     display: flex;

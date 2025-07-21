@@ -38,8 +38,8 @@ export const Project = (props: ProjectPropsType) => {
 
 const ProjectWrapper = styled.div`
     border-radius: 20px;
-    width: 375px;
-    height: 565px;
+    width: 345px;
+    min-height: 100%;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #363636;
     font-family: "Poppins", sans-serif;
@@ -48,17 +48,14 @@ const ProjectWrapper = styled.div`
 
 const StylesImg = styled.img`
     border-radius: 20px 20px 0 0;
-    width: 375px;
+    width: 100%;
     height: 260px;
 `
 
 const BoxInfo = styled.div`
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
-
 `
 
 const ProjectName = styled.h3`
