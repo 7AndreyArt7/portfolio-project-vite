@@ -1,5 +1,5 @@
 import './App.css'
-import {Header} from "./layout/Header.tsx";
+import {Header} from "./layout/header/Header.tsx";
 import {About} from "./layout/About.tsx";
 import {TechStack} from "./layout/TechStack.tsx";
 import {Projects} from "./layout/Projects/Projects.tsx";

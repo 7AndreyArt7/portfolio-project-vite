@@ -1,9 +1,9 @@
-import {Logo} from "../components/logo/Logo.tsx";
-import {Menu} from "../components/menu/Menu.tsx";
+import {Logo} from "../../components/logo/Logo.tsx";
+import {Menu} from "./menu/Menu.tsx";
 import styled from "styled-components";
-import {SocialNetworks} from "../components/social_networks/SocialNetworks.tsx";
-import {Container} from "../components/Container.tsx";
-import {FlexWrapper} from "../components/FlexWrapper.tsx";
+import {SocialNetworks} from "../../components/social_networks/SocialNetworks.tsx";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 export const Header = () => {
     return (
@@ -23,8 +23,12 @@ export const Header = () => {
 };
 
 const StyleHeader = styled.header`
-    margin-top: 40px;
-    margin-bottom: 50px;
+    background: rgba(25, 25, 25, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
 `
 const Navigation = styled.div`
     display: flex;

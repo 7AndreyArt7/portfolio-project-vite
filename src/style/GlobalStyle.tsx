@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme.tsx";
+// import fon from "../assets/images/fon.webp"
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -12,14 +13,22 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        margin: 0 auto;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
         background-color: ${theme.colors.primary};
-    }
+        margin: 0;
+    //     padding: 0;
+    //     background-image: url();
+    //     background-size: cover; 
+    //     background-position: center; 
+    //     background-repeat: no-repeat; 
+    //     background-attachment: fixed; 
+    //     min-height: 100vh;
+    // }
 
     button {
         border: none;

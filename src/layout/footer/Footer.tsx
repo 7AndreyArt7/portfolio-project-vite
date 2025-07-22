@@ -10,7 +10,7 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <FlexWrapper justify="space-between">
-                    <Icon iconId={"logo-007"}/>
+                    <Icon iconId={"logo-footer"}/>
                     <FlexWrapper>
                         <Link>+375 29 123 45 67</Link>
                         <Link>info@example.com</Link>
@@ -29,7 +29,7 @@ const StyledFooter = styled.footer`
     a+div{
         margin-left: 50px;
     }
-    margin-top: 200px;
+    margin-top: 100px;
 `
 const Link = styled.a`
     font-family: "DM Sans", sans-serif;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../../style/Theme.tsx";
 
 export const Menu = () => {
     return (
@@ -29,7 +30,7 @@ const StyledMenu = styled.nav`
         color: #a7a7a7;
         font-family: "DM Sans", sans-serif;
         &:hover {
-            background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+            background: ${theme.colors.secondary};
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

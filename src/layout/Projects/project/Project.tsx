@@ -40,14 +40,13 @@ const ProjectWrapper = styled.div`
     border-radius: 20px;
     width: 345px;
     min-height: 100%;
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #363636;
-    font-family: "Poppins", sans-serif;
     margin-bottom: 65px;
 `
 
 const StylesImg = styled.img`
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
     width: 100%;
     height: 260px;
 `

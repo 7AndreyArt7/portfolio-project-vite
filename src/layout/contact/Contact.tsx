@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Button} from "../../components/Button.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {theme} from "../../style/Theme.tsx";
 
 
 export const Contact = () => {
@@ -9,7 +10,7 @@ export const Contact = () => {
         <StyledContact>
             <Container>
                 <FlexWrapper direction={"column"}
-                align={"center"}>
+                             align={"center"}>
                     <Title>For any questions please mail me:</Title>
                     <Link href={"#"}> hi@pavanmg.in</Link>
                     <StyledForm>
@@ -26,7 +27,6 @@ export const Contact = () => {
 
 
 const StyledContact = styled.section`
-    min-height: 50vh;
 `
 
 const Title = styled.h2`
@@ -43,10 +43,10 @@ const Title = styled.h2`
 const Link = styled.a`
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
-    font-size: 58px;
+    font-size: 40px;
     line-height: 1.2069;
     letter-spacing: -0.02em;
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background: ${theme.colors.secondary};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -61,12 +61,32 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: 10px;
-   `
+
+    textarea {
+        resize: none;
+        height: 155px;
+    }
+
+`
 const Field = styled.input`
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 0.05em;
-    background: #252527;;
+    background-color: #252527;;
     border: 1px solid #4a4a4a;
+    padding: 7px 15px;
+    margin-bottom: 16px;
+    color: white;
     
+
+    &::placeholder {
+        text-transform: capitalize;
+        color: #495057;;
+    }
+    
+    &:focus-visible{
+        outline: 1px solid #4a4a4a;
+    }
 `

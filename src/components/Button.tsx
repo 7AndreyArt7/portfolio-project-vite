@@ -7,4 +7,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     color: #fff;
     background: transparent;
+    &:hover {
+        transform: scale(1.2);
+    }
 `

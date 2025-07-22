@@ -2,19 +2,22 @@ import {FlexWrapper} from "../components/FlexWrapper.tsx";
 import photo from "../assets/images/ava.webp"
 import styled from "styled-components";
 import {Container} from "../components/Container.tsx";
+import {theme} from "../style/Theme.tsx";
 
 export const About = () => {
     return (
         <StyledAbout>
             <Container>
-                <FlexWrapper justify={"space-between"} align="center" >
+                <FlexWrapper justify={"space-between"} align="center">
                     <StyledInfo>
                         <span>Hi 👋,</span>
                         <h2>My name is</h2>
                         <Name>Andrei Artsiusheuski</Name>
                         <h1>I build things for web</h1>
                     </StyledInfo>
+
                     <Photo src={photo}/>
+
                 </FlexWrapper>
             </Container>
         </StyledAbout>
@@ -22,7 +25,8 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
-    margin-bottom: 150px;
+    display: flex;
+    min-height: 100vh;
 `
 const StyledInfo = styled.div`
     display: flex;
@@ -31,7 +35,6 @@ const StyledInfo = styled.div`
     align-items: start;
 
     span, h2, h1 {
-        font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-size: 58px;
         line-height: 1.2069;
@@ -44,7 +47,7 @@ const Photo = styled.img`
     width: 350px;
     height: 350px;
     object-fit: cover;
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background: ${theme.colors.secondary};
     padding: 7px;
     border-radius: 100%;
     display: inline-block;
@@ -52,12 +55,12 @@ const Photo = styled.img`
     img {
         border-radius: 12px;
         display: block;
-        
+
         object-fit: cover;
 
 `
 const Name = styled.h2`
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background:${theme.colors.secondary};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
