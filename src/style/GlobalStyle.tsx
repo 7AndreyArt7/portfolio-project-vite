@@ -1,6 +1,5 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme.tsx";
-// import fon from "../assets/images/fon.webp"
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -20,15 +19,8 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
 
         background-color: ${theme.colors.primary};
-        margin: 0;
-    //     padding: 0;
-    //     background-image: url();
-    //     background-size: cover; 
-    //     background-position: center; 
-    //     background-repeat: no-repeat; 
-    //     background-attachment: fixed; 
-    //     min-height: 100vh;
-    // }
+        margin: 0 auto;
+   
 
     button {
         border: none;

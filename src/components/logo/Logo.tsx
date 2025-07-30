@@ -1,9 +1,16 @@
 import Icon from "../icon/Icon.tsx";
 
-export const Logo = () => {
+type LogoPropsType = {
+    iconId?: string;
+    height?:string;
+    width?:string;
+    viewBox?:string;
+}
+
+export const Logo = (props:LogoPropsType) => {
     return (
-        <a>
-            <Icon iconId="logo" height={"50"} viewBox={"0 0 105 60"}/>
+        <a href={"#"}>
+            <Icon iconId={props.iconId || "logo"} height={props.height || "60"} width={"60"} viewBox={props.viewBox || "0 0 60 60"}/>
         </a>
     );
 };

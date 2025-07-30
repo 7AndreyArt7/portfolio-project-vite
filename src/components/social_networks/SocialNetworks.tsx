@@ -7,13 +7,13 @@ export const SocialNetworks = () => {
         <StyleSocialNetworks>
             <ul>
                 <li>
-                    <a><Icon iconId={"github-logo"} height={"30"} width={"30"} viewBox={"0 0 30 30"}/></a>
+                    <a><Icon iconId={"github-logo"} height={"30"} width={"30"} viewBox={"0 0 31 31"}/></a>
                 </li>
                 <li>
-                    <a><Icon iconId={"twitter"} height={"30"} width={"30"} viewBox={"0 0 30 30"}/></a>
+                    <a><Icon iconId={"twitter"} height={"30"} width={"30"} viewBox={"0 0 31 31"}/></a>
                 </li>
                 <li>
-                    <a><Icon iconId={"in"} height={"30"} width={"30"} viewBox={"0 0 30 30"}/></a>
+                    <a><Icon iconId={"in"} height={"30"} width={"30"} viewBox={"0 0 31 31"}/></a>
                 </li>
             </ul>
         </StyleSocialNetworks>

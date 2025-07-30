@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Icon from "../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {SocialNetworks} from "../../components/social_networks/SocialNetworks.tsx";
 import {Container} from "../../components/Container.tsx";
+import {Logo} from "../../components/logo/Logo.tsx";
 
 
 export const Footer = () => {
@@ -10,7 +10,7 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <FlexWrapper justify="space-between">
-                    <Icon iconId={"logo-footer"}/>
+                    <Logo iconId={"logo-footer"} height={"60"} width={"60"} viewBox={"0 0 60 60"} />
                     <FlexWrapper>
                         <Link>+375 29 123 45 67</Link>
                         <Link>info@example.com</Link>

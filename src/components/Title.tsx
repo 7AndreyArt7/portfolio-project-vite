@@ -8,6 +8,7 @@ export const Title = styled.h2<TitlePropsType>`
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 48px;
+    
     line-height: 54%;
     text-align: center;
     color: #ccc;

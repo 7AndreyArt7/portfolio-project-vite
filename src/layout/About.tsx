@@ -3,6 +3,7 @@ import photo from "../assets/images/ava.webp"
 import styled from "styled-components";
 import {Container} from "../components/Container.tsx";
 import {theme} from "../style/Theme.tsx";
+import abstract from "./../assets/icon/abstract.svg"
 
 export const About = () => {
     return (
@@ -16,7 +17,10 @@ export const About = () => {
                         <h1>I build things for web</h1>
                     </StyledInfo>
 
-                    <Photo src={photo}/>
+                    <PhotoWrapper>
+                        <Photo src={photo} alt=""/>
+                    </PhotoWrapper>
+
 
                 </FlexWrapper>
             </Container>
@@ -43,24 +47,44 @@ const StyledInfo = styled.div`
     }
 `
 
-const Photo = styled.img`
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
+const PhotoWrapper = styled.div`
+    position: relative;
     background: ${theme.colors.secondary};
     padding: 7px;
+    width: 350px;
+    height: 350px;
     border-radius: 100%;
-    display: inline-block;
 
-    img {
-        border-radius: 12px;
+    //img {
+    //    width: 100%;
+    //    height: 100%;
+    //    object-fit: cover;
+    //    border-radius: 100%;
+    //}
+
+    &::before {
+        content: "";
+        width: 628px;
+        height: 628px;
         display: block;
-
-        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("${abstract}");
+    }
 
 `
+
+const Photo = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+`
+
 const Name = styled.h2`
-    background:${theme.colors.secondary};
+    background: ${theme.colors.secondary};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

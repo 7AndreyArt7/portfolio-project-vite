@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../../../style/Theme.tsx";
 
-export const Menu = () => {
+export const HeaderMenu = () => {
     return (
-        <StyledMenu>
+        <StyledHeaderMenu>
             <ul>
                 <StyledLink><a href={"#"}>Home</a></StyledLink>
                 <StyledLink><a href={"#"}>About</a></StyledLink>
@@ -11,11 +11,11 @@ export const Menu = () => {
                 <StyledLink><a href={"#"}>Projects</a></StyledLink>
                 <StyledLink><a href={"#"}>Contact</a></StyledLink>
             </ul>
-        </StyledMenu>
+        </StyledHeaderMenu>
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
     max-width: 790px;
     width: 100%;
   
@@ -34,6 +34,10 @@ const StyledMenu = styled.nav`
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        
+        @media ${theme.media.tablet} {
+            display: none;
         }
         
     }

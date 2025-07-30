@@ -25,7 +25,7 @@ export const Project = (props: ProjectPropsType) => {
                             <Link href={"#"}>Live Preview</Link>
                         </FlexWrapper>
                         <FlexWrapper>
-                            <Icon iconId={"github"} width={"20"} height={"20"}/>
+                            <Icon iconId={"github"} width={"20"} height={"20"} viewBox={"0 0 90 90"}/>
                             <Link href={"#"}>View Code</Link>
                         </FlexWrapper>
                     </BoxLink>

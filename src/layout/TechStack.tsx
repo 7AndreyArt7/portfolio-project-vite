@@ -18,8 +18,8 @@ export const TechStack = () => {
                         Technologies I’ve been working with recently
                     </Description>
                     <IconBlock>
-                        <Icon iconId={"webstorm"} height={"120px"} width={"120px"} viewBox={"0 0 350 350"}/>
-                        <Icon iconId={"github"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
+                        <Icon iconId={"webstorm"} height={"130px"} width={"130px"} viewBox={"0 0 320 300"}/>
+                        <Icon iconId={"github"} height={"120px"} width={"120px"} viewBox={"0 0 100 100"}/>
                         <Icon iconId={"git"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
                         <Icon iconId={"react"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
                         <Icon iconId={"type-vscode"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
@@ -39,10 +39,19 @@ const StyledTechStack = styled.section`
 `
 
 const IconBlock = styled.div`
-    max-width: 100%;
+    max-width: 1100px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 3fr);
-    grid-column-gap: 150px;
-    grid-row-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    gap: 25px;
+    justify-items: center;
+
+    @media screen {max-width: 575px} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+
+}
 
 `
