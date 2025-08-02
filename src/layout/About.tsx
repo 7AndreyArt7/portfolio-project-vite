@@ -1,15 +1,15 @@
-import {FlexWrapper} from "../components/FlexWrapper.tsx";
 import photo from "../assets/images/ava.webp"
 import styled from "styled-components";
 import {Container} from "../components/Container.tsx";
 import {theme} from "../style/Theme.tsx";
 import abstract from "./../assets/icon/abstract.svg"
+import {font} from "../style/Common.ts";
 
 export const About = () => {
     return (
         <StyledAbout>
             <Container>
-                <FlexWrapper justify={"space-between"} align="center">
+                <Flex>
                     <StyledInfo>
                         <span>Hi 👋,</span>
                         <h2>My name is</h2>
@@ -21,8 +21,7 @@ export const About = () => {
                         <Photo src={photo} alt=""/>
                     </PhotoWrapper>
 
-
-                </FlexWrapper>
+                </Flex>
             </Container>
         </StyledAbout>
     );
@@ -31,36 +30,37 @@ export const About = () => {
 const StyledAbout = styled.section`
     display: flex;
     min-height: 100vh;
+    margin-top: 80px;
+    align-items: start;
+`
+const Flex= styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 `
 const StyledInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    text-align: center;
+   
+    
+    letter-spacing: -0.02em;
 
-    span, h2, h1 {
-        font-weight: 700;
-        font-size: 58px;
-        line-height: 1.2069;
-        letter-spacing: -0.02em;
-        color: #d9d9d9;
+    ${font({fontWeight: 700, Fmax: 58, Fmin: 32, color: "#d9d9d9", lineHeight: 1})};
+    @media ${theme.media.mobile} {
+        align-items: center;
     }
+}
 `
 
 const PhotoWrapper = styled.div`
+    margin-top: 20px;
     position: relative;
     background: ${theme.colors.secondary};
     padding: 7px;
     width: 350px;
     height: 350px;
     border-radius: 100%;
-
-    //img {
-    //    width: 100%;
-    //    height: 100%;
-    //    object-fit: cover;
-    //    border-radius: 100%;
-    //}
+    
 
     &::before {
         content: "";
@@ -73,8 +73,7 @@ const PhotoWrapper = styled.div`
         transform: translate(-50%, -50%);
         background-image: url("${abstract}");
     }
-
-`
+    `
 
 const Photo = styled.img`
     width: 100%;
@@ -85,7 +84,6 @@ const Photo = styled.img`
 
 const Name = styled.h2`
     background: ${theme.colors.secondary};
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `

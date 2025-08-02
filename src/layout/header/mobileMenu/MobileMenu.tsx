@@ -55,25 +55,17 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
         li + li {
             margin-top: 20px;
-            }
         }
     }
+}
 
-    a {
-        font-family: "DM Sans", sans-serif;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.3;
-        color: #a7a7a7;
-
-        &:hover {
-            background: ${theme.colors.secondary};
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-    }
+a {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #a7a7a7;
+}
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -97,7 +89,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background: rgba(255, 255, 255, 0);
         `}
-        
         &::before {
             content: "";
             display: block;
