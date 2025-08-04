@@ -7,6 +7,7 @@ import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import {theme} from "../../style/Theme.tsx";
 
 
+
 export const TechStack = () => {
     return (
         <StyledTechStack>

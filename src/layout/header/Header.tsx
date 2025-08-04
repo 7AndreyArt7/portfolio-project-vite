@@ -10,6 +10,16 @@ import {S} from "./Header_style.ts"
 const menuItems = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
 export const Header: React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     return (
         <S.Header>
             <Container>
@@ -18,9 +28,9 @@ export const Header: React.FC = () => {
                     <Logo iconId={"logo"} height={"60"} width={"60"} viewBox={"0 0 60 60"}/>
 
                     <S.Navigation>
-                        <DesktopMenu menuItems={menuItems}/>
-                        <SocialNetworks/>
-                        <MobileMenu menuItems={menuItems} />
+                        {width < breakpoint ? <SocialNetworks/> : undefined}
+                        {width < breakpoint ? <MobileMenu menuItems={menuItems}/> : <DesktopMenu menuItems={menuItems}/>}
+                        {width < breakpoint ? undefined  :  <SocialNetworks/>}
                     </S.Navigation>
 
                 </FlexWrapper>
