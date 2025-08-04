@@ -4,6 +4,7 @@ import Icon from "../components/icon/Icon.tsx";
 import styled from "styled-components";
 import {Container} from "../components/Container.tsx";
 import {FlexWrapper} from "../components/FlexWrapper.tsx";
+import {theme} from "../style/Theme.tsx";
 
 
 export const TechStack = () => {
@@ -35,7 +36,11 @@ export const TechStack = () => {
 };
 
 const StyledTechStack = styled.section`
-    margin-bottom: 150px;
+    margin-top: 254px;
+
+    @media ${theme.media.tablet} {
+        margin-top:160px;
+    }
 `
 
 const IconBlock = styled.div`
@@ -44,14 +49,14 @@ const IconBlock = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(250px, auto);
-    gap: 25px;
     justify-items: center;
 
-    @media screen {max-width: 575px} {
-    display: grid;
+    @media ${theme.media.tablet} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media ${theme.media.mobile} {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(250px, auto);
-
 }
 
 `

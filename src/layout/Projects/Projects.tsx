@@ -17,7 +17,7 @@ export const Projects = () => {
             <FlexWrapper direction={"column"} align={"center"}>
                 <Title>Projects</Title>
                 <Description>Things I’ve built so far</Description>
-                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
                     <Project
                         image={project1}
                         projectName={"Project Tile goes here"}
