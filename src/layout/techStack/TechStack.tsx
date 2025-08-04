@@ -1,63 +1,89 @@
 import {Description} from "../../components/Description.tsx";
 import {Title} from "../../components/Title.tsx";
 import Icon from "../../components/icon/Icon.tsx";
-import styled from "styled-components";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {theme} from "../../style/Theme.tsx";
+import React from "react";
+import {S} from "./TechStack_Style.ts";
 
+const iconItems = [
+    {
+        iconId: "webstorm",
+        height: "130px",
+        width: "130px",
+        viewBox: "0 0 320 300"
+    },
+    {
+        iconId: "github",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 100 100"
+    },
+    {
+        iconId: "git",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    },
+    {
+        iconId: "react",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    },
+    {
+        iconId: "type-vscode",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    },
+    {
+        iconId: "type-css",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    },
+    {
+        iconId: "type-html",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    },
+    {
+        iconId: "type-js",
+        height: "120px",
+        width: "120px",
+        viewBox: "0 0 120 120"
+    }
+]
 
-
-export const TechStack = () => {
+export const TechStack: React.FC = () => {
     return (
-        <StyledTechStack>
+        <S.TechStack>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
+
                     <Title>
                         My Tech Stack
                     </Title>
+
                     <Description>
                         Technologies I’ve been working with recently
                     </Description>
-                    <IconBlock>
-                        <Icon iconId={"webstorm"} height={"130px"} width={"130px"} viewBox={"0 0 320 300"}/>
-                        <Icon iconId={"github"} height={"120px"} width={"120px"} viewBox={"0 0 100 100"}/>
-                        <Icon iconId={"git"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                        <Icon iconId={"react"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                        <Icon iconId={"type-vscode"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                        <Icon iconId={"type-css"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                        <Icon iconId={"type-html"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                        <Icon iconId={"type-js"} height={"120px"} width={"120px"} viewBox={"0 0 120 120"}/>
-                    </IconBlock>
+
+                    <S.IconBlock>
+                        {iconItems.map((i, index) => {
+                            return <Icon key={index}
+                                         iconId={i.iconId}
+                                         height={i.height}
+                                         width={i.width}
+                                         viewBox={i.viewBox}/>
+                        })}
+                    </S.IconBlock>
+
                 </FlexWrapper>
             </Container>
-        </StyledTechStack>
+        </S.TechStack>
 
     );
 };
-
-const StyledTechStack = styled.section`
-    margin-top: 254px;
-
-    @media ${theme.media.tablet} {
-        margin-top:160px;
-    }
-`
-
-const IconBlock = styled.div`
-    max-width: 1100px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(250px, auto);
-    justify-items: center;
-
-    @media ${theme.media.tablet} {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    @media ${theme.media.mobile} {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-`
