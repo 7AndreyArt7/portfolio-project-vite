@@ -1,33 +1,10 @@
-import photo from "../assets/images/ava.webp"
 import styled from "styled-components";
-import {Container} from "../components/Container.tsx";
-import {theme} from "../style/Theme.tsx";
-import abstract from "./../assets/icon/abstract.svg"
-import {font} from "../style/Common.ts";
+import {theme} from "../../style/Theme.tsx";
+import {font} from "../../style/Common.ts";
+import abstract from "../../assets/icon/abstract.svg"
 
-export const About = () => {
-    return (
-        <StyledAbout>
-            <Container>
-                <Flex >
-                    <StyledInfo>
-                        <span>Hi 👋,</span>
-                        <h2>My name is</h2>
-                        <Name>Andrei Artsiusheuski</Name>
-                        <h1>I build things for web</h1>
-                    </StyledInfo>
 
-                    <PhotoWrapper>
-                        <Photo src={photo} alt=""/>
-                    </PhotoWrapper>
-
-                </Flex>
-            </Container>
-        </StyledAbout>
-    );
-};
-
-const StyledAbout = styled.section`
+const About = styled.section`
     display: flex;
     margin-top: 250px;
     
@@ -49,8 +26,7 @@ const Flex = styled.div`
     }
 `
 
-
-const StyledInfo = styled.div`
+const Info = styled.div`
     text-align: start;
     h1,h2,span {
         letter-spacing: -0.02em;
@@ -71,9 +47,6 @@ const PhotoWrapper = styled.div`
     height: 350px;
     border-radius: 100%;
     
-   
-    
-
     &::before {
         content: "";
         width: 628px;
@@ -105,3 +78,13 @@ const Name = styled.h2`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `
+
+
+export const S = {
+    About,
+    Flex,
+    Info,
+    PhotoWrapper,
+    Photo,
+    Name
+}

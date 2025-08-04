@@ -1,7 +1,7 @@
 import './App.css'
 import {Header} from "./layout/header/Header.tsx";
-import {About} from "./layout/About.tsx";
-import {TechStack} from "./layout/TechStack.tsx";
+import {About} from "./layout/about/About.tsx";
+import {TechStack} from "./layout/techStack/TechStack.tsx";
 import {Projects} from "./layout/Projects/Projects.tsx";
 import {Contact} from "./layout/contact/Contact.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";

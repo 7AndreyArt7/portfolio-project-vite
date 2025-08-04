@@ -1,10 +1,10 @@
-import {Description} from "../components/Description.tsx";
-import {Title} from "../components/Title.tsx";
-import Icon from "../components/icon/Icon.tsx";
+import {Description} from "../../components/Description.tsx";
+import {Title} from "../../components/Title.tsx";
+import Icon from "../../components/icon/Icon.tsx";
 import styled from "styled-components";
-import {Container} from "../components/Container.tsx";
-import {FlexWrapper} from "../components/FlexWrapper.tsx";
-import {theme} from "../style/Theme.tsx";
+import {Container} from "../../components/Container.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {theme} from "../../style/Theme.tsx";
 
 
 export const TechStack = () => {
