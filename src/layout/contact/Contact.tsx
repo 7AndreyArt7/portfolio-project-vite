@@ -3,10 +3,11 @@ import {Button} from "../../components/Button.tsx";
 import {Container} from "../../components/Container.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 import { S } from "./Contact_Style.ts";
+import React from "react";
 
 
 
-export const Contact = () => {
+export const Contact:React.FC = () => {
     return (
         <S.Contact>
             <Container>

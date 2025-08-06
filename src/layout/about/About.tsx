@@ -1,9 +1,10 @@
 import photo from "../../assets/images/ava.webp"
 import {Container} from "../../components/Container.tsx";
 import { S } from "./About_style.ts";
+import React from "react";
 
 
-export const About = () => {
+export const About:React.FC = () => {
     return (
         <S.About>
             <Container>

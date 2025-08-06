@@ -1,6 +1,7 @@
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import Icon from "../../../components/icon/Icon.tsx";
 import { S } from "../Project_Style.ts";
+import React from "react";
 
 
 type ProjectPropsType = {
@@ -10,7 +11,7 @@ type ProjectPropsType = {
     techStackCard?: string
 }
 
-export const Project = (props: ProjectPropsType) => {
+export const Project:React.FC = (props: ProjectPropsType) => {
     return (
         <S.ProjectWrapper>
             <FlexWrapper direction="column">

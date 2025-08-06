@@ -9,6 +9,7 @@ import project4 from "../../assets/images/project-4.webp"
 import project5 from "../../assets/images/project-5.webp"
 import project6 from "../../assets/images/project-6.webp"
 import {Container} from "../../components/Container.tsx";
+import React from "react";
 
 
 const infoProject = [
@@ -50,7 +51,7 @@ const infoProject = [
     },
 ]
 
-export const Projects = () => {
+export const Projects:React.FC = () => {
     return (
         <Container>
             <FlexWrapper direction={"column"} align={"center"}>
