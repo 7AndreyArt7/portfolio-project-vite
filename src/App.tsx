@@ -5,17 +5,19 @@ import {TechStack} from "./layout/techStack/TechStack.tsx";
 import {Projects} from "./layout/Projects/Projects.tsx";
 import {Contact} from "./layout/contact/Contact.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import {Particle} from "./components/particle/Particle.tsx";
 
 
 function App() {
     return (
         <div className="App">
-                <Header/>
-                <About/>
-                <TechStack/>
-                <Projects/>
-                <Contact/>
-                <Footer/>
+            <Particle/>
+            <Header/>
+            <About/>
+            <TechStack/>
+            <Projects/>
+            <Contact/>
+            <Footer/>
         </div>
     )
 }

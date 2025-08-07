@@ -11,7 +11,7 @@ type ProjectPropsType = {
     techStackCard?: string
 }
 
-export const Project:React.FC = (props: ProjectPropsType) => {
+export const Project:React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
     return (
         <S.ProjectWrapper>
             <FlexWrapper direction="column">

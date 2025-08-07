@@ -1,5 +1,4 @@
 type FontPropsType = {
-    fontFamily?: string;
     fontWeight?: number;
     lineHeight?: number;
     color?: string;
@@ -8,9 +7,8 @@ type FontPropsType = {
 
 }
 
-export const font = ({fontFamily, fontWeight, lineHeight, color, Fmin, Fmax}: FontPropsType  ) => `
-  font-family: ${fontFamily || "Poppins"} ;  
-  font-weight: ${fontWeight ||  400} ;
+export const font = ({fontWeight, lineHeight, color, Fmin, Fmax}: FontPropsType) => `
+  font-weight: ${fontWeight || 400} ;
   color: ${color};
   line-height: ${lineHeight || 1.2};
   

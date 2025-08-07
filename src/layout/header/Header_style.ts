@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../style/Theme.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.tsx";
 
 
 // header
@@ -10,6 +11,10 @@ const Header = styled.header`
     left: 0;
     right: 0;
     z-index: 99999;
+
+    & > ${FlexWrapper} {
+        
+    }
 `
 const Navigation = styled.div`
     display: flex;
@@ -18,6 +23,10 @@ const Navigation = styled.div`
     max-width: 609px;
     width: 100%;
     gap: 50px;
+    
+    & > ${FlexWrapper} {
+
+    }
 `
 
 

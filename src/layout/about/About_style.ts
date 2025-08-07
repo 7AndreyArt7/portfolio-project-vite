@@ -7,7 +7,7 @@ import abstract from "../../assets/icon/abstract.svg"
 const About = styled.section`
     display: flex;
     margin-top: 250px;
-    
+
     @media ${theme.media.tablet} {
         margin-top: 170px;
         justify-content: center;
@@ -28,30 +28,39 @@ const Flex = styled.div`
 
 const Info = styled.div`
     text-align: start;
-    h1,h2,span {
+
+    h1, h2, span {
         letter-spacing: -0.02em;
+        font-family: "Poppins", sans-serif;
 
         ${font({fontWeight: 700, Fmax: 54, Fmin: 32, color: "#d9d9d9", lineHeight: 1})};
+
+        p {
+            display: none;
+        }
     }
+
+
     @media ${theme.media.tablet} {
         text-align: center;
     }
 `
 
 const PhotoWrapper = styled.div`
-    margin-top: 100px;
+
     position: relative;
     background: ${theme.colors.secondary};
     padding: 7px;
     width: 350px;
     height: 350px;
     border-radius: 100%;
-    
+    overflow-x: clip;
+
     &::before {
         content: "";
         width: 628px;
-        height:628px;
-        //display: block;
+        height: 628px;
+        display: block;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -59,17 +68,18 @@ const PhotoWrapper = styled.div`
         background-image: url("${abstract}");
         z-index: 0;
         background-size: cover;
-
-        display: none;
     }
-    `
+
+    @media ${theme.media.tablet} {
+        margin-top: 100px;
+    }
+`
 
 const Photo = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 100%;
-    z-index: 1;
 `
 
 const Name = styled.h2`
